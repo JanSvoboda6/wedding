@@ -34,7 +34,7 @@
                 <a href="https://www.google.com/maps/place/Chapel.+Anton%C3%ADna+Padu%C3%A1nsk%C3%A9ho/@48.9597236,17.4725148,17z/data=!3m1!4b1!4m6!3m5!1s0x47133f6521982155:0x7a62968f08bb604c!8m2!3d48.9597236!4d17.4747035!16s%2Fg%2F121fwt4j">
                     <div>Kaple&nbsp;svatého&nbsp;Antonína</div>
                 </a>
-                <div style="margin-top: 10px">15.7. 2023</div>
+                <div style="margin-top: 10px">11:00</div>
             </div>
         </div>
 
@@ -56,33 +56,72 @@
 
     <div class="row">
         <div class="reveal">
-            <div class="h1 secondary">Seventh</div>
+            <div class="h1 secondary">15.7.</div>
         </div>
 
         <div class="nav-item contact">
-            <div>Dary</div>
+            <div>
+                <a href="https://docs.google.com/spreadsheets/d/1mJqXKFZgDfz0Zo0LRjq6nxPe4zO3W8oqd1JFgEMrzcg/edit#gid=0">
+                    <div>Dary</div>
+                </a>
+            </div>
         </div>
 
         <div class="reveal">
-            <div class="h1 secondary">Eighth</div>
+            <div class="h1 secondary">2023</div>
         </div>
     </div>
 
     <div class="hr"></div>
 
 </div>
+
 <script>
     const tl = gsap.timeline();
 
-    tl.from(".intro > div", .5, {
+    tl.from(".intro > div", 1.8, {
         opacity: 0,
         y: -100,
-        ease: "Power4.out",
+        ease: "power4.out",
         delay: .5,
         stagger: {
             amount: .3,
         },
     });
+
+    tl.from(".hr", 1.8, {
+            width: 0,
+            ease: "power4.out",
+            delay: 0.1,
+            stagger: {
+                amount: .3,
+            },
+        },
+        "-=1    "
+    );
+
+
+    tl.from(".reveal div", 1.8, {
+        y: 200,
+        width: 0,
+            ease: "power4.out",
+            stagger: {
+                amount: .3,
+            },
+        },
+        "-=1.5"
+    );
+
+    tl.from(".nav-item", 1.8, {
+            opacity: 0,
+            y: 100,
+            ease: "power4.out",
+            stagger: {
+                amount: .8,
+            },
+        },
+        "-=0.2"
+    );
 </script>
 </body>
 </html>

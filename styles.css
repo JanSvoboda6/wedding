@@ -10,7 +10,10 @@
 html, body {
     width: 100%;
     height: 100vh;
-    background: #b2b2a8;
+    background: #b2b2a8 url("church.gif");
+    background-repeat: no-repeat;
+    background-size:  800px 490px;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,6 +56,7 @@ html, body {
 
 .secondary {
     font-family: "Helvetica Neue", sans-serif;
+    font-size: 5.1em;
 }
 
 .p {
