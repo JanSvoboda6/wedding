@@ -10,38 +10,46 @@
 <div class="container">
     <div class="row">
         <div class="reveal">
-            <div class="h1 primary">F<span>i</span>rst</div>
+            <div class="h1 primary">Veronika</div>
         </div>
         <div class="reveal">
-            <div class="h1 primary">S<span>e</span>cond</div>
+            <div class="h1 primary">Jan</div>
         </div>
     </div>
 
     <div class="hr"></div>
 
     <div class="row intro">
-        <div class="p">First</div>
-        <div class="p">Second</div>
-        <div class="p">Third</div>
-        <div class="p">Fourth</div>
+        <div class="p">2</div>
+        <div class="p">0</div>
+        <div class="p">2</div>
+        <div class="p">3</div>
     </div>
 
     <div class="white-space"></div>
 
     <div class="row">
         <div class="nav-item about">
-            <div>About</div>
-            <div class="id">01</div>
+            <div>
+                <a href="https://www.google.com/maps/place/Chapel.+Anton%C3%ADna+Padu%C3%A1nsk%C3%A9ho/@48.9597236,17.4725148,17z/data=!3m1!4b1!4m6!3m5!1s0x47133f6521982155:0x7a62968f08bb604c!8m2!3d48.9597236!4d17.4747035!16s%2Fg%2F121fwt4j">
+                    <div>Kaple&nbsp;svatého&nbsp;Antonína</div>
+                </a>
+                <div style="margin-top: 10px">15.7. 2023</div>
+            </div>
         </div>
 
         <div class="reveal">
-            <div class="h1 secondary">Sixth</div>
+            <div class="h1 secondary"></div>
         </div>
 
         <div class="nav-item projects">
-            <div>Projects</div>
-            <div class="id">02</div>
+            <div>
+                <a href="https://facebook.com">
+                    <div>Kontakt</div>
+                </a>
+            </div>
         </div>
+
     </div>
 
     <div class="white-space"></div>
@@ -52,8 +60,7 @@
         </div>
 
         <div class="nav-item contact">
-            <div>Contact</div>
-            <div class="id">01</div>
+            <div>Dary</div>
         </div>
 
         <div class="reveal">
@@ -64,5 +71,18 @@
     <div class="hr"></div>
 
 </div>
+<script>
+    const tl = gsap.timeline();
+
+    tl.from(".intro > div", .5, {
+        opacity: 0,
+        y: -100,
+        ease: "Power4.out",
+        delay: .5,
+        stagger: {
+            amount: .3,
+        },
+    });
+</script>
 </body>
 </html>

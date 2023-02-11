@@ -34,7 +34,7 @@ html, body {
 }
 
 .reveal{
-    width: 400px;
+    width: 480px;
     height: 140px;
     position: relative;
     overflow: hidden;
@@ -73,13 +73,14 @@ html, body {
     margin: 0.6em;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .nav-item > div {
     padding: 1em;
-    font-family: "Ayuthaya", monospace;
-    font-size: 14px;
+    font-family: "Helvetica Neue", monospace;
+    font-size: 16px;
+    text-transform: uppercase;
 }
 
 .about {
@@ -87,12 +88,9 @@ html, body {
 }
 
 .projects {
-    background: #db4c44;
+    background: #f18580;
 }
 
-.projects > div {
-    color: #fff;
-}
 
 .contact {
     background: #e7a92b;
