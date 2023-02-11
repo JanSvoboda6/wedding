@@ -101,3 +101,13 @@ html, body {
 .id {
     margin-right: 0.8em;
 }
+
+@media(max-width: 900px) {
+    .h1 {
+        font-size: 2em;
+    }
+
+    .p {
+        font-size: 8px;
+    }
+}
