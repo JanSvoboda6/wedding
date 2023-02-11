@@ -4,7 +4,7 @@
     box-sizing: border-box;
     font-family: "JetBrains Mono", monospace;
     font-style: italic;
-    color: #3e3b36;
+    color: #2a2824;
 }
 
 html, body {
@@ -61,7 +61,7 @@ html, body {
 
 .p {
     padding: 0.8em 0;
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 500;
     text-transform: uppercase;
 }
@@ -83,22 +83,27 @@ html, body {
 .nav-item > div {
     padding: 1em;
     font-family: "Helvetica Neue", monospace;
-    font-size: 16px;
+    font-size: 18px;
     text-transform: uppercase;
 }
 
-.about {
-    background: #e7dbcc;
+a, .subtext {
+    color: #e7dbcc;
+    text-underline-color: #e7dbcc;
 }
 
-.projects {
-    background: #f18580;
-}
+/*.about {*/
+/*    background: #e7dbcc;*/
+/*}*/
+
+/*.projects {*/
+/*    background: #f18580;*/
+/*}*/
 
 
-.contact {
-    background: #e7a92b;
-}
+/*.contact {*/
+/*    background: #e7a92b;*/
+/*}*/
 
 .id {
     margin-right: 0.8em;
