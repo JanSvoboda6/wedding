@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "JetBrains Mono", monospace;
+    font-style: italic;
+    color: #3e3b36;
+}
+
+html, body {
+    width: 100%;
+    height: 100vh;
+    background: #b2b2a8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    padding: 2em;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hr {
+    width: 100%;
+    height: 1px;
+    background: #3e3b36;
+}
+
+.reveal{
+    width: 400px;
+    height: 140px;
+    position: relative;
+    overflow: hidden;
+}
+
+.reveal div {
+    position: absolute;
+    line-height: 1.8em;
+}
+
+.h1 {
+    font-size: 6.4em;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+}
+
+.secondary {
+    font-family: "Helvetica Neue", sans-serif;
+}
