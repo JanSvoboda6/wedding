@@ -3,16 +3,14 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "JetBrains Mono", monospace;
-    font-style: italic;
-    color: #2a2824;
+    background: #ffffff;
 }
 
 html, body {
     width: 100%;
     height: 100vh;
-    background: #b2b2a8 url("church.gif");
     background-repeat: no-repeat;
-    background-size:  800px 490px;
+    background-size:  700px 420px;
     background-position: center;
     display: flex;
     justify-content: center;
@@ -25,15 +23,96 @@ html, body {
     padding: 2em;
 }
 
+.screen {
+    height: 100vh;
+    width: 100%;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
+}
+
+.screen-secondary {
+    font-style: normal;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.hide {
+    opacity: 0;
+    left: -100%;
+    font-weight: bolder;
+}
+.show {
+    opacity: 1;
+    left: 0;
+}
+
+.section {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: lighter;
+}
+
+.section-text {
+    background-color: #ffffff;
+}
+
+.timer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+}
+
+.heading {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading-text {
+    font-size: 65px;
+    margin-bottom: auto;
+    font-weight: lighter;
+}
+
+h2 {
+    font-style: italic;
+    font-weight: lighter;
+}
+
+.picture {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.picture-bird {
+    width: 30vh;
+}
+
+.picture-us {
+    width: 40vh;
+    transition: all 1s;
+}
+
 .row {
+    margin-top: 30px;
     display: flex;
     justify-content: space-between;
 }
 
 .hr {
     width: 100%;
-    height: 1px;
-    background: #3e3b36;
+    height: 0px;
+    background: #B6886A;
 }
 
 .reveal{
@@ -56,7 +135,7 @@ html, body {
 
 .secondary {
     font-family: "Helvetica Neue", sans-serif;
-    font-size: 5.1em;
+    font-size: 3.1em;
 }
 
 .p {
@@ -89,7 +168,7 @@ html, body {
 
 a, .subtext {
     color: #e7dbcc;
-    text-underline-color: #e7dbcc;
+    text-underline-color: #6c3c06;
 }
 
 /*.about {*/
