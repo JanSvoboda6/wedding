@@ -8,17 +8,20 @@
 </head>
 <body>
 <div class="container">
-
     <div class="screen">
-        <div class="timer"><p>81d:21h:15m:11s</p></div>
+        <div class="top-bar">
+            <p class="top-bar-text">veronika + jan</p>
+            <div class="timer" id="timer"><p></p></div>
+            <p class="top-bar-button" id="toggle-audio-button" onClick="toggleAudio()">zvuk</p>
+        </div>
         <div class="heading">
-            <div class="heading-text">veronika <br> & jan</div>
+            <div class="heading-text">veronika <br> + jan</div>
             <div class="picture"><img class="picture-bird" src="bird.svg"></div>
         </div>
 
     </div>
 
-    <div class="screen-secondary">
+    <div class="screen" id="screen-second">
         <div class="section">
             <div class="column">
                 <h2 class="section-text">Místo</h2>
@@ -31,10 +34,10 @@
                     suscipit a, interdum id, felis. In
                     sem justo, commodo ut, suscipit at, pharetra vitae, orci. Ut tempus purus at lorem.</p>
             </div>
-            <div class="picture"><img class="picture-us" id="hello" src="area.png"></div>
+            <div class="picture"><img class="picture-area" src="area.png"></div>
         </div>
         <div class="section">
-            <div class="picture"><img class="picture-us" src="building.png"></div>
+            <div class="picture"><img class="picture-building" src="building.png"></div>
             <div class="column">
                 <h2 class="section-text">Ubytování</h2>
                 <p class="section-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
@@ -49,8 +52,10 @@
         </div>
     </div>
 
-    <div class="screen">
+    <div class="screen" id="screen-third">
         <div class="section">
+            <div class="column">
+            <h2 class="section-text">Dary</h2>
             <p class="section-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
                 Curabitur bibendum justo non orci. Nullam sit amet magna in
                 magna gravida vehicula. Aliquam id dolor. Mauris dictum
@@ -59,20 +64,28 @@
                 risus id tortor. Aliquam id dolor. Nulla turpis magna, cursus sit amet,
                 suscipit a, interdum id, felis. In
                 sem justo, commodo ut, suscipit at, pharetra vitae, orci. Ut tempus purus at lorem.</p>
+            </div>
             <div class="picture"><img class="picture-us" src="us.png"></div>
         </div>
     </div>
 </div>
 </body>
 <script>
-    myID = document.getElementById("hello");
+    secondScreen = document.getElementById("screen-second");
+    screenThird = document.getElementById("screen-third");
 
     var myScrollFunc = function () {
         var y = window.scrollY;
-        if (y >= 700) {
-            myID.className = "picture-us show"
+        if (y >= 110) {
+            secondScreen.className = "screen-secondary show"
         } else {
-            myID.className = "picture-us hide"
+            secondScreen.className = ".screen-secondary hide"
+        }
+
+        if (y >= 1010) {
+            screenThird.className = "screen-secondary show"
+        } else {
+            screenThird.className = ".screen-secondary hide"
         }
     };
 
@@ -81,11 +94,11 @@
 
     const tl = gsap.timeline();
 
-    tl.from(".picture", 1.8, {
+    tl.from(".picture-bird", 1.8, {
         opacity: 0,
         x: 500,
         ease: "power4.out",
-        delay: .5,
+
         stagger: {
             amount: 0.5,
         },
@@ -99,6 +112,18 @@
             },
         },
         "-=1.45"
+    );
+
+    tl.from(".timer", 1.8, {
+            opacity: 0,
+            x: 0,
+            ease: "power4.out",
+            stagger: {
+                amount: 0.5,
+            },
+            delay: 1.1,
+        },
+        "-= 1"
     );
 
 
@@ -123,5 +148,52 @@
         },
         "-=0.2"
     );
+
+    var x = setInterval(function () {
+        var ctx = {};
+        var countDownDate = new Date('Jul 15 2023 12:00:00').getTime(),
+            now = new Date().getTime(),
+            diff = countDownDate - now,
+            tweeks = Math.floor(diff / (1000 * 7 * 24 * 60 * 60)),
+            tdays = Math.floor((diff / (1000 * 60 * 60 * 24))),
+            thours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+            tminutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)),
+            tseconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        // Keep 2 digits
+        ctx.weeks = (tweeks < 10) ? '0' + tweeks : tweeks;
+        ctx.days = (tdays < 10) ? '0' + tdays : tdays;
+        ctx.hours = (thours < 10) ? '0' + thours : thours;
+        ctx.minutes = (tminutes < 10) ? '0' + tminutes : tminutes;
+        ctx.seconds = (tseconds < 10) ? '0' + tseconds : tseconds;
+
+        // Check for time expiration
+        if (diff < 0) {
+            clearInterval(x);
+        }
+
+       document.getElementById("timer").innerHTML = ctx.days + "d:" + ctx.hours + "h:" + ctx.minutes + "m:" + ctx.seconds + "s";
+    }, 1000);
+
+    var source = "./improvs_01.mp3"
+    var audio = document.createElement("audio");
+    audio.autoplay = false;
+    audio.load()
+    audio.addEventListener("load", function() {
+        audio.play();
+    }, true);
+    audio.src = source;
+
+    button = document.getElementById("toggle-audio-button");
+
+    function toggleAudio() {
+        if (audio.paused) {
+            audio.play();
+            button.className = "top-bar-button"
+        } else {
+            audio.pause();
+            button.className = "top-bar-button cross-out"
+        }
+    }
 </script>
 </html>

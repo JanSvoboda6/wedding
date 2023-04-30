@@ -4,6 +4,65 @@
     box-sizing: border-box;
     font-family: "JetBrains Mono", monospace;
     background: #ffffff;
+    cursor: url('./cursor-red.svg'), pointer;
+}
+
+@font-face {
+    font-family: moontime;
+    src: url("./moontime.ttf");
+}
+
+.top-bar{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    position: fixed;
+    align-items: center;
+    width: 100%;
+    z-index: 1;
+    padding: 2vh;
+    height: 5vh;
+    color: #b70c0c;
+    font-weight: lighter;
+}
+
+.top-bar-text{
+    width: 200px;
+    font-style: italic;
+    background-color: inherit;
+    height: 3vh;
+}
+
+.top-bar-button{
+    width: 50px;
+    font-style: italic;
+    background-color: inherit;
+    height: 3vh;
+}
+
+.cross-out {
+    text-decoration: line-through;
+}
+
+.top-bar-button:hover{
+    text-decoration: line-through;
+    animation: strike 1s linear;
+}
+
+@keyframes strike {
+    from { text-decoration-color: transparent; }
+    to { text-decoration-color: auto; }
+}
+.cross-out  {
+    text-decoration: line-through;
+    animation: strike 1s linear;
+}
+
+.timer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: inherit;
 }
 
 html, body {
@@ -20,7 +79,6 @@ html, body {
 .container {
     width: 100%;
     height: 100vh;
-    padding: 2em;
 }
 
 .screen {
@@ -37,6 +95,7 @@ html, body {
     display: flex;
     height: 100vh;
     width: 100%;
+    transition: all 2s;
 }
 
 .hide {
@@ -60,13 +119,9 @@ html, body {
 
 .section-text {
     background-color: #ffffff;
-}
-
-.timer {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    height: 10vh;
+    text-align: justify;
+    text-justify: newspaper;
+    padding: 0vh 10vh;
 }
 
 .heading {
@@ -74,13 +129,17 @@ html, body {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .heading-text {
-    font-size: 65px;
-    margin-bottom: auto;
+    font-size: 105px;
     font-weight: lighter;
+    text-align: right;
+    justify-content: right;
+    padding-bottom: 10%;
+    font-family: moontime;
+    color: #B6886A;
 }
 
 h2 {
@@ -94,13 +153,21 @@ h2 {
     align-items: center;
 }
 
+.picture-area {
+    width: 40vh;
+}
+
+
+.picture-building {
+    width: 40vh;
+}
+
 .picture-bird {
     width: 30vh;
 }
 
 .picture-us {
     width: 40vh;
-    transition: all 1s;
 }
 
 .row {
@@ -189,11 +256,29 @@ a, .subtext {
 }
 
 @media(max-width: 900px) {
-    .h1 {
-        font-size: 2em;
+    .screen-secondary {
+        flex-direction: column;
     }
 
-    .p {
-        font-size: 8px;
+    .section {
+        flex-direction: column;
+    }
+
+    .section-text{
+        padding: 10px;
+    }
+
+    .picture-area
+    {
+        height: 300px;
+        width: auto;
+        margin-bottom: 20px;
+    }
+
+    .picture-building
+    {
+        height: 200px;
+        width: auto;
+        display: none;
     }
 }
