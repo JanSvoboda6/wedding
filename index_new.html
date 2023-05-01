@@ -5,18 +5,20 @@
     <title>wedding</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400&display=swap" rel="stylesheet"></head>
 <body>
 <div class="container">
     <div class="screen">
         <div class="top-bar">
             <p class="top-bar-text">veronika + jan</p>
             <div class="timer" id="timer"><p></p></div>
-            <p class="top-bar-button" id="toggle-audio-button" onClick="toggleAudio()">zvuk</p>
+            <p class="top-bar-button cross-out" id="toggle-audio-button" onClick="toggleAudio()">zvuk</p>
         </div>
         <div class="heading">
             <div class="heading-text">veronika <br> + jan</div>
-            <div class="picture"><img class="picture-bird" src="bird.svg"></div>
+            <div class="picture"><img class="picture-faces" src="faces.svg"></div>
         </div>
 
     </div>
@@ -94,7 +96,7 @@
 
     const tl = gsap.timeline();
 
-    tl.from(".picture-bird", 1.8, {
+    tl.from(".picture-faces", 1.8, {
         opacity: 0,
         x: 500,
         ease: "power4.out",
@@ -172,17 +174,30 @@
             clearInterval(x);
         }
 
-       document.getElementById("timer").innerHTML = ctx.days + "d:" + ctx.hours + "h:" + ctx.minutes + "m:" + ctx.seconds + "s";
+       document.getElementById("timer").innerHTML = ctx.days + "d " + ctx.hours + "h " + ctx.minutes + "m " + ctx.seconds + "s";
     }, 1000);
 
-    var source = "./improvs_01.mp3"
+    var source = "./recording.mp3"
     var audio = document.createElement("audio");
-    audio.autoplay = false;
-    audio.load()
+    audio.autoplay = true;
+    audio.load();
     audio.addEventListener("load", function() {
         audio.play();
     }, true);
+
+    let playAttempt = setInterval(() => {
+        audio
+            .play()
+            .then(() => {
+                clearInterval(playAttempt);
+            })
+            .catch((error) => {
+                console.log("Unable to play the video, User has not interacted yet.");
+            });
+    }, 1000);
+
     audio.src = source;
+
 
     button = document.getElementById("toggle-audio-button");
 
