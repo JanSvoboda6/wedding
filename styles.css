@@ -62,7 +62,7 @@
 
 @keyframes strike {
     from { text-decoration-color: transparent; }
-    to { text-decoration-color: auto; }
+    to { text-decoration-color: white; }
 }
 .cross-out  {
     text-decoration: line-through;
