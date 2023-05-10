@@ -177,27 +177,27 @@
        document.getElementById("timer").innerHTML = ctx.days + "d " + ctx.hours + "h " + ctx.minutes + "m " + ctx.seconds + "s";
     }, 1000);
 
-    // var source = "./recording.mp3"
-    // var audio = document.createElement("audio");
-    // audio.autoplay = true;
-    // audio.load();
-    // audio.addEventListener("load", function() {
-    //     audio.play();
-    // }, true);
-    //
-    // let playAttempt = setInterval(() => {
-    //     audio
-    //         .play()
-    //         .then(() => {
-    //             clearInterval(playAttempt);
-    //         })
-    //         .catch((error) => {
-    //             console.log("Unable to play the video, User has not interacted yet.");
-    //         });
-    // }, 1000);
-    // audio.src = source;
-    //
-    // button = document.getElementById("toggle-audio-button");
+    var source = "./recording.mp3"
+    var audio = document.createElement("audio");
+    audio.autoplay = true;
+    audio.load();
+    audio.addEventListener("load", function() {
+        audio.play();
+    }, true);
+
+    let playAttempt = setInterval(() => {
+        audio
+            .play()
+            .then(() => {
+                clearInterval(playAttempt);
+            })
+            .catch((error) => {
+                console.log("Unable to play the video, User has not interacted yet.");
+            });
+    }, 1000);
+    audio.src = source;
+
+    button = document.getElementById("toggle-audio-button");
 
     function toggleAudio() {
         if (audio.paused) {

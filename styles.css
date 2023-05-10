@@ -55,20 +55,6 @@
     text-decoration: line-through;
 }
 
-.top-bar-button:hover{
-    text-decoration: none;
-    animation: strike 2s linear;
-}
-
-@keyframes strike {
-    from { text-decoration-color: transparent; }
-    to { text-decoration-color: white; }
-}
-.cross-out  {
-    text-decoration: line-through;
-    animation: strike 1s linear;
-}
-
 .timer {
     width: 100%;
     display: flex;
