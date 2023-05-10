@@ -78,7 +78,7 @@
 
     var myScrollFunc = function () {
         var y = window.scrollY;
-        if (y >= 110) {
+        if (y >= 10) {
             secondScreen.className = "screen-secondary show"
         } else {
             secondScreen.className = ".screen-secondary hide"
@@ -92,7 +92,6 @@
     };
 
     window.addEventListener("scroll", myScrollFunc);
-
 
     const tl = gsap.timeline();
 

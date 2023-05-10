@@ -263,6 +263,7 @@ a, .subtext {
     }
 
     .heading{
+        padding-top: 30px;
         flex-direction: column;
     }
 
@@ -288,8 +289,6 @@ a, .subtext {
 
     .picture-building
     {
-        height: 200px;
-        width: auto;
         display: none;
     }
 }
