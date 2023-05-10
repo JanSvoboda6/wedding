@@ -2,6 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>wedding</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
@@ -12,8 +13,8 @@
 <div class="container">
     <div class="screen">
         <div class="top-bar">
-            <p class="top-bar-text">veronika + jan</p>
-            <div class="timer" id="timer"><p></p></div>
+            <p class="top-bar-text">v + j</p>
+            <div class="timer" id="timer"></div>
             <p class="top-bar-button cross-out" id="toggle-audio-button" onClick="toggleAudio()">zvuk</p>
         </div>
         <div class="heading">
@@ -176,29 +177,27 @@
        document.getElementById("timer").innerHTML = ctx.days + "d " + ctx.hours + "h " + ctx.minutes + "m " + ctx.seconds + "s";
     }, 1000);
 
-    var source = "./recording.mp3"
-    var audio = document.createElement("audio");
-    audio.autoplay = true;
-    audio.load();
-    audio.addEventListener("load", function() {
-        audio.play();
-    }, true);
-
-    let playAttempt = setInterval(() => {
-        audio
-            .play()
-            .then(() => {
-                clearInterval(playAttempt);
-            })
-            .catch((error) => {
-                console.log("Unable to play the video, User has not interacted yet.");
-            });
-    }, 1000);
-
-    audio.src = source;
-
-
-    button = document.getElementById("toggle-audio-button");
+    // var source = "./recording.mp3"
+    // var audio = document.createElement("audio");
+    // audio.autoplay = true;
+    // audio.load();
+    // audio.addEventListener("load", function() {
+    //     audio.play();
+    // }, true);
+    //
+    // let playAttempt = setInterval(() => {
+    //     audio
+    //         .play()
+    //         .then(() => {
+    //             clearInterval(playAttempt);
+    //         })
+    //         .catch((error) => {
+    //             console.log("Unable to play the video, User has not interacted yet.");
+    //         });
+    // }, 1000);
+    // audio.src = source;
+    //
+    // button = document.getElementById("toggle-audio-button");
 
     function toggleAudio() {
         if (audio.paused) {

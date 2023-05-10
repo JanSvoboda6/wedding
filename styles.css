@@ -56,8 +56,8 @@
 }
 
 .top-bar-button:hover{
-    text-decoration: line-through;
-    animation: strike 1s linear;
+    text-decoration: none;
+    animation: strike 2s linear;
 }
 
 @keyframes strike {
@@ -271,8 +271,18 @@ a, .subtext {
 }
 
 @media(max-width: 900px) {
+
+    .top-bar{
+        font-size: 14px;
+    }
+
+    .heading{
+        flex-direction: column;
+    }
+
     .screen-secondary {
         flex-direction: column;
+        height: 170vh;
     }
 
     .section {
@@ -285,7 +295,7 @@ a, .subtext {
 
     .picture-area
     {
-        height: 300px;
+        height: 40vh;
         width: auto;
         margin-bottom: 20px;
     }
