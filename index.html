@@ -19,54 +19,93 @@
         </div>
         <div class="heading">
             <div class="heading-text">veronika <br> + jan</div>
-            <div class="picture"><img class="picture-faces" src="faces.svg" xmlns="http://www.w3.org/2000/svg"></div>
+            <div class="picture"><img class="picture-bird" src="bird.svg" xmlns="http://www.w3.org/2000/svg"></div>
         </div>
     </div>
 
     <div class="screen" id="screen-second">
-        <div class="section">
+        <div class="section-timetable">
             <div class="column">
-                <h2 class="section-text">Místo</h2>
-                <p class="section-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                    Curabitur bibendum justo non orci. Nullam sit amet magna in
-                    magna gravida vehicula. Aliquam id dolor. Mauris dictum
-                    facilisis augue. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                    Fusce tellus. Aenean fermentum
-                    risus id tortor. Aliquam id dolor. Nulla turpis magna, cursus sit amet,
-                    suscipit a, interdum id, felis. In
-                    sem justo, commodo ut, suscipit at, pharetra vitae, orci. Ut tempus purus at lorem.</p>
+                <p class="section-text">Co:</p>
+                <p class="section-text">Svatba Antonínská</p>
             </div>
-            <div class="picture"><img class="picture-area" src="area.png"></div>
+            <div class="column">
+                <p class="section-text">Kdy: </p>
+                <p class="section-text">15.července 2023</p>
+            </div>
+            <div class="column">
+                <p class="section-text">Kde:</p>
+                <p class="section-text">Kaple sv.Antonína</p>
+            </div>
         </div>
+
         <div class="section">
-            <div class="picture"><img class="picture-building" src="building.png"></div>
-            <div class="column">
-                <h2 class="section-text">Ubytování</h2>
-                <p class="section-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                    Curabitur bibendum justo non orci. Nullam sit amet magna in
-                    magna gravida vehicula. Aliquam id dolor. Mauris dictum
-                    facilisis augue. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                    Fusce tellus. Aenean fermentum
-                    risus id tortor. Aliquam id dolor. Nulla turpis magna, cursus sit amet,
-                    suscipit a, interdum id, felis. In
-                    sem justo, commodo ut, suscipit at, pharetra vitae, orci. Ut tempus purus at lorem.</p>
-            </div>
+            <p class="section-text">Program</p>
+            <p class="section-text">12:00
+                svatební obřad
+                <br>
+                13:00
+                svatební oběd
+                <br>
+                14:00
+                krájení dortu
+                +
+                klavírní živá hudba
+                <br>
+                16:00
+                příjezd ostatních hostů
+                <br>
+                18:00
+                večerní raut </p>
         </div>
     </div>
 
     <div class="screen" id="screen-third">
         <div class="section">
             <div class="column">
-            <h2 class="section-text">Dary</h2>
-            <p class="section-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                Curabitur bibendum justo non orci. Nullam sit amet magna in
-                magna gravida vehicula. Aliquam id dolor. Mauris dictum
-                facilisis augue. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                Fusce tellus. Aenean fermentum
-                risus id tortor. Aliquam id dolor. Nulla turpis magna, cursus sit amet,
-                suscipit a, interdum id, felis. In
-                sem justo, commodo ut, suscipit at, pharetra vitae, orci. Ut tempus purus at lorem.</p>
+                <h2 class="section-text">Místo</h2>
+                <p class="section-text">Celý náš den proběhne na samém vrchu blatnického kopce.
+                    "Ano" si řekneme v kapli svatého Antonína.
+                    Zbytek dne pak strávíme pod vzrostlými borovicemi
+                    u myslivecké chaty. Tenisky a nízké podpatky jsou vítány!</p>
             </div>
+        </div>
+        <div class="section">
+            <div class="column">
+                <h2 class="section-text">Dary</h2>
+                <p class="section-text">Netrapte se přemýšlením nad tím,
+                    jaký svatební dar nám koupit. Věřte, že nic materiálního
+                    nepotřebujeme. A pokud přesto nechcete přijít s prázdnou,
+                    nejvíce oceníme finanční příspěvek na společné bydlení. </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="screen" id="screen-fourth">
+        <div class="section">
+            <div class="section">
+                <div class="column">
+                    <h2 class="section-text">Dresscode</h2>
+                    <p class="section-text">...není! Na nic si nehrajeme,
+                        a to ani na naší svatbě. Chcete přijít v kraťasech?
+                        Přijďte! Léto k tomu vybízí. Kravata vás škrtí?
+                        Zahoďte ji. Podpatky jsou otrava? Totálně rozumíme.
+                        Mějte jenom na paměti, že obřad sice proběhne v kostele,
+                        zbytek dne však strávíme na nerovném a travnatém povrchu. </p>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="column">
+                    <h2 class="section-text">Ubytování</h2>
+                    <p class="section-text">Až bude samou únavou hrozit,
+                        že se skutálíte z kopce do Blatnice,
+                        nebude nic jednoduššího, než složit hlavu přímo v
+                        myslivecké chatě. Vyspí se v ní až 20  nocležníků,
+                        tak neváhejte a pište, kdo máte o ubytování zájem. </p>
+                </div>
+            </div>
+
             <div class="picture"><img class="picture-us" src="us.png"></div>
         </div>
     </div>
@@ -75,19 +114,18 @@
 <script>
     secondScreen = document.getElementById("screen-second");
     screenThird = document.getElementById("screen-third");
+    screenFourth = document.getElementById("screen-fourth");
 
     var myScrollFunc = function () {
         var y = window.scrollY;
         if (y >= 10) {
             secondScreen.className = "screen-secondary show"
+            screenThird.className = "screen-secondary show"
+            screenFourth.className = "screen-secondary show"
         } else {
             secondScreen.className = ".screen-secondary hide"
-        }
-
-        if (y >= 1010) {
-            screenThird.className = "screen-secondary show"
-        } else {
             screenThird.className = ".screen-secondary hide"
+            screenFourth.className = ".screen-secondary hide"
         }
     };
 
@@ -95,7 +133,7 @@
 
     const tl = gsap.timeline();
 
-    tl.from(".picture-faces", 1.8, {
+    tl.from(".picture-bird", 1.8, {
         opacity: 0,
         x: 500,
         ease: "power4.out",
@@ -178,11 +216,6 @@
 
     var source = "./recording.mp3"
     var audio = document.createElement("audio");
-    audio.autoplay = true;
-    audio.load();
-    audio.addEventListener("load", function() {
-        audio.play();
-    }, true);
 
     audio.src = source;
     button = document.getElementById("toggle-audio-button");
