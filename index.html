@@ -8,7 +8,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400&display=swap" rel="stylesheet"></head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400&display=swap" rel="stylesheet">
+</head>
 <body>
 <div class="container">
     <div class="screen">
@@ -27,53 +28,56 @@
         <div class="section-timetable">
             <div class="column">
                 <p class="section-text">Co:</p>
-                <p class="section-text">Svatba Antonínská</p>
+                <div class="space"></div>
+                <p class="section-text impact-text">Svatba Antonínská</p>
+                <img class="picture-line" src="line.svg"/>
             </div>
             <div class="column">
-                <p class="section-text">Kdy: </p>
-                <p class="section-text">15.července 2023</p>
+                <p class="section-text ">Kdy: </p>
+                <div class="space"></div>
+                <p class="section-text impact-text">15.července 2023</p>
+                <img class="picture-line" src="line.svg"/>
             </div>
             <div class="column">
                 <p class="section-text">Kde:</p>
-                <p class="section-text">Kaple sv.Antonína</p>
+                <div class="space"></div>
+                <p class="section-text impact-text">Kaple sv.Antonína</p>
+                <img class="picture-line" src="line.svg"/>
             </div>
         </div>
 
         <div class="section">
-            <p class="section-text">Program</p>
-            <p class="section-text">12:00
-                svatební obřad
-                <br>
-                13:00
-                svatební oběd
-                <br>
-                14:00
-                krájení dortu
-                +
-                klavírní živá hudba
-                <br>
-                16:00
-                příjezd ostatních hostů
-                <br>
-                18:00
-                večerní raut </p>
+            <h2 class="section-text impact-text">veronika + jan</h2>
+            <div class="space-tiny"></div>
+            <p class="section-text"> 2 374 dní spolu <br> <br>
+                9 procestovaných zemí <br> <br>
+                1 000+ spolu uvařených jídel <br> <br>
+                10 000+ pusinek</p>
+            <div class="space-tiny"></div>
+            <div class="picture"><img class="picture-us" src="us.png"></div>
         </div>
+
     </div>
 
     <div class="screen" id="screen-third">
         <div class="section">
             <div class="column">
-                <h2 class="section-text">Místo</h2>
-                <p class="section-text">Celý náš den proběhne na samém vrchu blatnického kopce.
+                <h2 class="section-text text-block">Místo</h2>
+                <div class="space-tiny"></div>
+                <p class="section-text text-block">Celý náš den proběhne na samém vrchu blatnického kopce.
                     "Ano" si řekneme v kapli svatého Antonína.
                     Zbytek dne pak strávíme pod vzrostlými borovicemi
                     u myslivecké chaty. Tenisky a nízké podpatky jsou vítány!</p>
             </div>
+            <div class="space-tiny"></div>
+            <img class="picture-area" src="area.png"/>
         </div>
+        <div class="space"></div>
         <div class="section">
             <div class="column">
-                <h2 class="section-text">Dary</h2>
-                <p class="section-text">Netrapte se přemýšlením nad tím,
+                <h2 class="section-text text-block">Dary</h2>
+                <div class="space-tiny"></div>
+                <p class="section-text text-block">Netrapte se přemýšlením nad tím,
                     jaký svatební dar nám koupit. Věřte, že nic materiálního
                     nepotřebujeme. A pokud přesto nechcete přijít s prázdnou,
                     nejvíce oceníme finanční příspěvek na společné bydlení. </p>
@@ -101,12 +105,31 @@
                     <p class="section-text">Až bude samou únavou hrozit,
                         že se skutálíte z kopce do Blatnice,
                         nebude nic jednoduššího, než složit hlavu přímo v
-                        myslivecké chatě. Vyspí se v ní až 20  nocležníků,
+                        myslivecké chatě. Vyspí se v ní až 20 nocležníků,
                         tak neváhejte a pište, kdo máte o ubytování zájem. </p>
                 </div>
+                <div class="column">
+                    <div class="section">
+                        <p class="section-text">Program</p>
+                        <p class="section-text">12:00
+                            svatební obřad
+                            <br>
+                            13:00
+                            svatební oběd
+                            <br>
+                            14:00
+                            krájení dortu
+                            +
+                            klavírní živá hudba
+                            <br>
+                            16:00
+                            příjezd ostatních hostů
+                            <br>
+                            18:00
+                            večerní raut </p>
+                    </div>
+                </div>
             </div>
-
-            <div class="picture"><img class="picture-us" src="us.png"></div>
         </div>
     </div>
 </div>
@@ -211,7 +234,7 @@
             clearInterval(x);
         }
 
-       document.getElementById("timer").innerHTML = ctx.days + "d " + ctx.hours + "h " + ctx.minutes + "m " + ctx.seconds + "s";
+        document.getElementById("timer").innerHTML = ctx.days + "d " + ctx.hours + "h " + ctx.minutes + "m " + ctx.seconds + "s";
     }, 1000);
 
     var source = "./recording.mp3"
