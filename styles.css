@@ -117,7 +117,7 @@ html, body {
     align-items: center;
     text-align: center;
     justify-content: space-around;
-    font-weight: lighter;
+    font-weight: 300;
     margin-left: 1vh;
     margin-right: 1vh;
 }
@@ -130,7 +130,7 @@ html, body {
 .section-bullet-points {
     display: flex;
     justify-content: space-around;
-    font-weight: lighter;
+    font-weight: 300;
     flex-direction: column;
     margin-left: 1vh;
     margin-right: 1vh;
@@ -166,6 +166,7 @@ html, body {
 .impact-text {
     color: #595941;
     font-style: italic;
+    font-weight: 200;
     font-size: 21px;
 }
 
@@ -197,12 +198,12 @@ html, body {
     /*font-family: moontime;*/
     font-family: "MoonTime";
     color: #595941;
-    font-weight: lighter;
+    font-weight: 300;
 }
 
 h2 {
     font-style: italic;
-    font-weight: lighter;
+    font-weight: 200;
     color: #595941;
 }
 
@@ -350,10 +351,6 @@ a, .subtext {
     .picture-area {
         height: 40vh;
         width: auto;
-    }
-
-    .picture-line {
-        width: 50%;
     }
 
     .picture-building {
