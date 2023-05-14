@@ -7,6 +7,10 @@
     cursor: url('./cursor-red.svg'), pointer;
 }
 
+body {
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
 ::-webkit-scrollbar {
     width: 0;
     height: 0;
@@ -196,8 +200,6 @@ html, body {
     font-size: 90px;
     text-align: right;
     justify-content: right;
-    padding-bottom: 10%;
-    /*font-family: moontime;*/
     font-family: "MoonTime";
     color: #595941;
     font-weight: 300;
