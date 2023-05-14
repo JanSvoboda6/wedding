@@ -36,9 +36,11 @@ body {
     width: 100%;
     z-index: 1;
     padding: 2vh;
-    height: 7vh;
+    height: 50px;
     color: #595941;
     font-weight: 200;
+    background: white;
+    top: 0;
 }
 
 .top-bar-text {
@@ -414,11 +416,5 @@ a, .subtext {
 @media (min-width: 1300px) {
     .container {
         width: 1300px;
-    }
-
-    .top-bar {
-        width: 1000px;
-        left: 50%;
-        transform: translate(-50%, 0);
     }
 }
