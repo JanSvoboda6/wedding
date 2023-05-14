@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400&display=swap"
           rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
     <link rel="preload" href="./moontime.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="preload" href="./josefin-slab.ttf" as="font" type="font/ttf" crossorigin>
 </head>
@@ -33,19 +33,19 @@
         <div class="space"></div>
         <div class="section-bullet-points">
             <div class="column">
-                <p class="section-text">Co:</p>
+                <p class="section-text bold italic">Co:</p>
                 <div class="space-tiny"></div>
                 <p class="section-text impact-text">Svatba Antonínská</p>
             </div>
             <div class="space"></div>
             <div class="column">
-                <p class="section-text ">Kdy: </p>
+                <p class="section-text bold italic">Kdy: </p>
                 <div class="space-tiny"></div>
                 <p class="section-text impact-text">15.července 2023</p>
             </div>
             <div class="space"></div>
             <div class="column">
-                <p class="section-text">Kde:</p>
+                <p class="section-text bold italic">Kde:</p>
                 <div class="space-tiny"></div>
                 <p class="section-text impact-text">Kaple sv.Antonína</p>
             </div>
@@ -58,7 +58,7 @@
     <div class="screen" id="screen-third">
         <div class="section">
             <div class="column">
-                <h2 class="section-text text-huge-padding">Místo</h2>
+                <h2 class="section-text text-huge-padding bold">Místo</h2>
                 <div class="space-tiny"></div>
                 <p class="section-text text-huge-padding">Celý náš den proběhne na samém vrchu blatnického kopce.
                     "Ano" si řekneme v kapli svatého Antonína.
@@ -77,7 +77,7 @@
     <div class="screen-secondary" id="screen-fourth">
         <div class="section">
             <div class="column">
-                <h2 class="section-text text-huge-padding">Dary</h2>
+                <h2 class="section-text text-huge-padding bold">Dary</h2>
                 <div class="space-tiny"></div>
                 <p class="section-text text-huge-padding">Netrapte se přemýšlením nad tím,
                     jaký svatební dar nám koupit. Věřte, že nic materiálního
@@ -89,7 +89,7 @@
         <div class="space"></div>
         <div class="section">
             <div class="column">
-                <h2 class="section-text text-huge-padding">Ubytování</h2>
+                <h2 class="section-text text-huge-padding bold">Ubytování</h2>
                 <div class="space-tiny"></div>
                 <p class="section-text text-huge-padding">Až bude samou únavou hrozit,
                     že se skutálíte z kopce do Blatnice,
@@ -107,7 +107,7 @@
     <div class="screen-secondary" id="screen-fifth">
         <div class="section">
             <div class="column">
-                <h2 class="section-text text-huge-padding">Dresscode</h2>
+                <h2 class="section-text text-huge-padding bold">Dresscode</h2>
                 <div class="space-tiny"></div>
                 <p class="section-text text-huge-padding">...není! Na nic si nehrajeme,
                     a to ani na naší svatbě. Chcete přijít v kraťasech?
@@ -121,7 +121,7 @@
         <div class="space"></div>
         <div class="section">
             <div class="column section-text-programme">
-                <h2 class="section-text text-huge-padding">Program</h2>
+                <h2 class="section-text text-huge-padding bold">Program</h2>
                 <div class="space-tiny"></div>
                 <p class="section-text text-huge-padding">12:00
                     svatební obřad
@@ -149,29 +149,29 @@
         <div class="section">
             <div class="column">
                 <span class="counter" id="counter-1"></span>
-                <h2 class="section-text text-huge-padding text-center">veronika + jan</h2>
+                <h2 class="section-text text-huge-padding text-center text-moontime">veronika + jan</h2>
                 <div class="space"></div>
 
                 <div class="section-text text-huge-padding section-bullet-points text-statistics">
-                    <div id="statistics-days">0</div>
+                    <div class="bold" id="statistics-days">0</div>
                     <div>dní spolu</div>
                 </div>
                 <div class="space-tiny"></div>
 
                 <div class="section-text text-huge-padding section-bullet-points text-statistics">
-                    <div id="statistics-countries">0</div>
+                    <div class="bold" id="statistics-countries">0</div>
                     <div>procestovaných zemí</div>
                 </div>
                 <div class="space-tiny"></div>
 
                 <div class="section-text text-huge-padding section-bullet-points text-statistics">
-                    <div id="statistics-meals">0</div>
+                    <div class="bold" id="statistics-meals">0</div>
                     <div>spolu uvařených jídel</div>
                 </div>
                 <div class="space-tiny"></div>
 
                 <div class="section-text text-huge-padding section-bullet-points text-statistics">
-                    <div id="statistics-kisses">0</div>
+                    <div class="bold" id="statistics-kisses">0</div>
                     <div>pusinek</div>
                 </div>
 
@@ -328,7 +328,7 @@
     const runStatistics = () => {
 
         if (!hasStatisticsBeenAlreadyShown) {
-            animate(daysCounter, 0, 2400, 2000);
+            animate(daysCounter, 0, 2350, 2000);
             animate(countriesCounter, 0, 9, 2000);
             animate(mealsCounter, 0, 1000, 2000);
             animate(kissesCounter, 0, 10000, 2000);

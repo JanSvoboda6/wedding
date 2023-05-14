@@ -36,16 +36,16 @@ body {
     width: 100%;
     z-index: 1;
     padding: 2vh;
-    height: 50px;
+    height: 60px;
     color: #595941;
-    font-weight: 200;
+    font-weight: 400;
+    font-style: italic;
     background: white;
     top: 0;
 }
 
 .top-bar-text {
     width: 200px;
-    font-style: italic;
     background-color: inherit;
     height: 3vh;
     white-space: nowrap;
@@ -169,7 +169,16 @@ html, body {
 }
 
 .bold {
-    font-weight: bolder;
+    font-weight: 400;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.text-moontime {
+    font-family: "MoonTime";
+    font-size: 70px;
 }
 
 .impact-text {
@@ -247,7 +256,6 @@ h2 {
     width: 40vh;
     margin: 5vh auto;
 }
-
 
 .row {
     margin-top: 30px;
@@ -362,12 +370,16 @@ a, .subtext {
         font-size: 19px;
     }
 
-    .section-text {
-        font-weight: 200;
-    }
-
     .picture-line {
         width: 25vh;
+    }
+
+    .top-bar {
+        height: 50px;
+    }
+
+    .text-moontime {
+        font-size: 50px;
     }
 }
 
@@ -389,12 +401,17 @@ a, .subtext {
     .space {
         margin: 1vh;
     }
+
+    .text-moontime {
+        font-size: 40px;
+    }
 }
 
 @media (max-height: 500px) {
     .heading-text {
         font-size: 55px;
     }
+
     .section-text {
         padding: 0 15px;
         font-size: 14px;
