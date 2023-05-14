@@ -25,7 +25,6 @@
 
 .top-bar {
     display: flex;
-    justify-content: space-evenly;
     flex-direction: row;
     position: fixed;
     align-items: center;
@@ -362,17 +361,61 @@ a, .subtext {
         font-weight: 200;
     }
 
-    .picture-line{
+    .picture-line {
         width: 25vh;
     }
 }
 
+
+@media (max-width: 350px) {
+    .section-text {
+        padding: 0 15px;
+        font-size: 14px;
+    }
+
+    .impact-text {
+        font-size: 16px;
+    }
+
+    .space-tiny {
+        margin: 10px
+    }
+
+    .space {
+        margin: 1vh;
+    }
+}
+
+@media (max-height: 500px) {
+    .heading-text {
+        font-size: 55px;
+    }
+    .section-text {
+        padding: 0 15px;
+        font-size: 14px;
+    }
+
+    .impact-text {
+        font-size: 16px;
+    }
+
+    .space-tiny {
+        margin: 10px
+    }
+
+    .space {
+        margin: 1vh;
+    }
+}
+
 @media (min-width: 1300px) {
-    .container{
+    .container {
         width: 1300px;
     }
+
     .top-bar {
         width: 1000px;
-        margin: 0 100px;
+        left: 50%;
+        transform: translate(-50%, 0);
     }
 }
