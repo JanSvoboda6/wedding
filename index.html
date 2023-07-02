@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EH4TKYXVPR"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-EH4TKYXVPR');
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>wedding</title>
@@ -143,16 +134,16 @@
                 <p class="section-text text-huge-padding">12:00
                     svatební obřad
                     <br><br>
-                    13:00
+                    13:30
                     svatební oběd
                     <br><br>
-                    14:00
+                    14:30
                     krájení dortu
                     <br><br>
-                    16:00
+                    17:00
                     příjezd ostatních hostů
                     <br><br>
-                    18:00
+                    18:30
                     večerní raut </p>
             </div>
         </div>
@@ -203,7 +194,7 @@
     screenThird = document.getElementById("screen-third");
     screenFourth = document.getElementById("screen-fourth");
 
-    var myScrollFunc = function () {
+    var scroll = function () {
         var y = window.scrollY;
         if (y >= 10) {
             secondScreen.className = "screen-secondary show"
@@ -216,7 +207,7 @@
         }
     };
 
-    window.addEventListener("scroll", myScrollFunc);
+    window.addEventListener("scroll", scroll);
 
     const tl = gsap.timeline();
 
@@ -275,7 +266,7 @@
         "-=0.2"
     );
 
-    var x = setInterval(function () {
+    var countdown = setInterval(function () {
         var ctx = {};
         var countDownDate = new Date('Jul 15 2023 12:00:00').getTime(),
             now = new Date().getTime(),
@@ -293,14 +284,14 @@
         ctx.seconds = (tseconds < 10) ? '0' + tseconds : tseconds;
 
         if (diff < 0) {
-            clearInterval(x);
+            clearInterval(countdown);
         }
 
         document.getElementById("timer").innerHTML = ctx.days + "d " + ctx.hours + "h " + ctx.minutes + "m " + ctx.seconds + "s";
     }, 1000);
 
-    var source = "./recording.mp3"
-    var audio = document.createElement("audio");
+    const source = "./recording.mp3";
+    const audio = document.createElement("audio");
 
     audio.src = source;
     button = document.getElementById("toggle-audio-button");
@@ -317,7 +308,6 @@
 
     function animate(obj, initVal, lastVal, duration) {
         let startTime = null;
-        let currentTime = Date.now();
         const step = (currentTime) => {
 
             if (!startTime) {
