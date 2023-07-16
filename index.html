@@ -231,19 +231,6 @@
         "-=1.45"
     );
 
-    tl.from(".timer", 2.3, {
-            opacity: 0,
-            x: 0,
-            ease: "power4.out",
-            stagger: {
-                amount: 0.5,
-            },
-            delay: 1.5,
-        },
-        "-= 1"
-    );
-
-
     tl.from(".reveal div", 1.8, {
             y: 200,
             width: 0,
@@ -265,30 +252,6 @@
         },
         "-=0.2"
     );
-
-    var countdown = setInterval(function () {
-        var ctx = {};
-        var countDownDate = new Date('Jul 15 2023 12:00:00').getTime(),
-            now = new Date().getTime(),
-            diff = countDownDate - now,
-            tweeks = Math.floor(diff / (1000 * 7 * 24 * 60 * 60)),
-            tdays = Math.floor((diff / (1000 * 60 * 60 * 24))),
-            thours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-            tminutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)),
-            tseconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-        ctx.weeks = (tweeks < 10) ? '0' + tweeks : tweeks;
-        ctx.days = (tdays < 10) ? '0' + tdays : tdays;
-        ctx.hours = (thours < 10) ? '0' + thours : thours;
-        ctx.minutes = (tminutes < 10) ? '0' + tminutes : tminutes;
-        ctx.seconds = (tseconds < 10) ? '0' + tseconds : tseconds;
-
-        if (diff < 0) {
-            clearInterval(countdown);
-        }
-
-        document.getElementById("timer").innerHTML = ctx.days + "d " + ctx.hours + "h " + ctx.minutes + "m " + ctx.seconds + "s";
-    }, 1000);
 
     const source = "./recording.mp3";
     const audio = document.createElement("audio");
